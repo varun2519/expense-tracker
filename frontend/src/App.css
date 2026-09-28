@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+.app { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+header h1 { font-size: 24px; margin-bottom: 20px; }
+
+.error-banner {
+  background: #fde8e8;
+  color: #c53030;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
+.main { display: flex; flex-direction: column; gap: 20px; }
+
+.panel {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.panel h2 { font-size: 16px; margin: 0 0 12px; }
+
+.expense-form input,
+.expense-form select,
+.filters input,
+.filters select,
+.inline-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.filters select, .filters input { width: auto; margin-bottom: 0; }
+
+.inline-form { display: flex; gap: 8px; flex-wrap: wrap; }
+.inline-form input { width: auto; flex: 1; margin-bottom: 0; }
+
+button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:disabled { background: #9ca3af; cursor: not-allowed; }
+button + button { margin-left: 8px; }
+
+.link-btn {
+  background: none;
+  color: #2563eb;
+  padding: 2px 4px;
+  font-size: 13px;
+}
+
+.category-list, .summary-list { list-style: none; padding: 0; margin: 0; }
+.category-list li, .summary-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.total { font-weight: 600; font-size: 15px; }
+
+.expense-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.expense-table th, .expense-table td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.form-actions { display: flex; gap: 8px; }
